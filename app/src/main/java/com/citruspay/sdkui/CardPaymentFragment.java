@@ -12,8 +12,13 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import static com.citruspay.sdkui.CardOption.CardType.DEBIT;
-import static com.citruspay.sdkui.CardOption.CardType.CREDIT;
+import com.citrus.sdkui.CardOption;
+import com.citrus.sdkui.CreditCardOption;
+import com.citrus.sdkui.DebitCardOption;
+
+
+//import static com.citruspay.sdkui.CardOption.CardType.DEBIT;
+//import static com.citruspay.sdkui.CardOption.CardType.CREDIT;
 
 
 /**
@@ -121,10 +126,10 @@ public class CardPaymentFragment extends Fragment implements View.OnClickListene
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId) {
             case R.id.radioDebitCard:
-                mCardType = DEBIT;
+                mCardType = CardOption.CardType.DEBIT;
                 break;
             case R.id.radioCreditCard:
-                mCardType = CREDIT;
+                mCardType = CardOption.CardType.CREDIT;
                 break;
         }
     }

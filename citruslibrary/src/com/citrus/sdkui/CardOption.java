@@ -93,7 +93,8 @@ public abstract class CardOption extends PaymentOption {
             public String getCardType() {
                 return "debit";
             }
-        }, CREDIT {
+        },
+        CREDIT {
             public String getCardType() {
                 return "credit";
             }
